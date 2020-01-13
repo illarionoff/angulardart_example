@@ -4,7 +4,6 @@ import 'hero_service.dart';
 import 'package:angular_router/angular_router.dart';
 
 import 'hero.dart';
-import 'mock_heroes.dart';
 import 'route_paths.dart';
 
 @Component(
@@ -18,7 +17,7 @@ import 'route_paths.dart';
 class HeroListComponent implements OnInit {
   final HeroService _heroService;
   final Router _router;
-  List<Hero> heroes = mockHeroes;
+  List<Hero> heroes;
   Hero selected;
 
   HeroListComponent(this._heroService, this._router);
